@@ -1,0 +1,117 @@
+/* src/components/Navbar.module.css */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand / Logo */
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--clr-accent);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+/* Nav links group */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+  position: relative;
+}
+
+.link:hover {
+  color: var(--clr-text);
+  background-color: var(--clr-surface-2);
+}
+
+/* Active link — React Router will apply this class */
+.linkActive {
+  color: var(--clr-text);
+  background-color: var(--clr-surface-2);
+}
+
+/* Cart link — slightly distinct */
+.cartLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.cartLink:hover {
+  color: var(--clr-text);
+  background-color: var(--clr-surface-2);
+}
+
+/* Badge — the number bubble on the cart */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  background-color: var(--clr-accent);
+  color: #0f0f0f;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  border-radius: 999px;
+  line-height: 1;
+  animation: popIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* Mobile hamburger — hidden for now, easy to extend */
+@media (max-width: 600px) {
+  .links {
+    gap: 0;
+  }
+  .link,
+  .cartLink {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  .brand {
+    font-size: 1.1rem;
+  }
+}
