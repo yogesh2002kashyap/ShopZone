@@ -1,52 +1,72 @@
+<div align="center">
+
 # 🛒 ShopZone
 
-A multi-page e-commerce frontend built as a Single Page Application (SPA) using React. Browse products, view details, and manage a shopping cart — all without a single page reload.
+### A blazing-fast Single Page Application built with React
 
-**Live Demo → [shopzone.vercel.app](https://shop-zone-ek9yqc5tg-yogeshs-projects-8c5e493b.vercel.app/)**
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://shop-zone-ek9yqc5tg-yogeshs-projects-8c5e493b.vercel.app/)
+[![React](https://img.shields.io/badge/React_18-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev)
+[![React Router](https://img.shields.io/badge/React_Router-%23CA4245.svg?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com)
+[![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
----
+<br />
 
-## Features
+> Browse products · Add to cart · Checkout — all without a single page reload.
 
-- **Product Browsing** — 30+ products fetched live from DummyJSON API
-- **Product Detail Pages** — Dynamic routing with image gallery, rating, stock info
-- **Shopping Cart** — Add, remove, and adjust quantities with real-time total
-- **Persistent Cart** — Cart survives page refreshes via localStorage
-- **Guest Authentication** — Fake login system with protected checkout route
-- **Fully Responsive** — Works on mobile, tablet, and desktop
+<br />
 
----
-
-## Pages & Routes
-
-| Route | Page | Protected |
-|---|---|---|
-| `/` | Home | No |
-| `/shop` | Product Grid | No |
-| `/product/:id` | Product Detail | No |
-| `/cart` | Shopping Cart | No |
-| `/contact` | Contact Form | No |
-| `/login` | Login | No |
-| `/checkout` | Checkout | ✅ Yes |
+</div>
 
 ---
 
-## Tech Stack
+## ✨ Features
+
+🗂️ &nbsp;**Product Browsing** — 30+ live products fetched from DummyJSON API  
+🔍 &nbsp;**Dynamic Detail Pages** — Image gallery, ratings, stock, brand info  
+🛒 &nbsp;**Shopping Cart** — Add, remove, adjust quantities with live total  
+💾 &nbsp;**Persistent Cart** — Survives page refreshes via localStorage  
+🔐 &nbsp;**Guest Auth** — Fake login with a fully protected checkout route  
+📱 &nbsp;**Responsive** — Clean experience on mobile, tablet, and desktop  
+
+---
+
+## 🚀 Live Demo
+
+**👉 [https://shop-zone-ek9yqc5tg-yogeshs-projects-8c5e493b.vercel.app/](https://shop-zone-ek9yqc5tg-yogeshs-projects-8c5e493b.vercel.app/)**
+
+---
+
+## 🗺️ Pages & Routes
+
+| Route | Page | Auth Required |
+|:---|:---|:---:|
+| `/` | 🏠 Home | — |
+| `/shop` | 🏪 Product Grid | — |
+| `/product/:id` | 📦 Product Detail | — |
+| `/cart` | 🛒 Shopping Cart | — |
+| `/contact` | 📬 Contact Form | — |
+| `/login` | 🔐 Login | — |
+| `/checkout` | ✅ Checkout | 🔒 Yes |
+
+---
+
+## 🧰 Tech Stack
 
 | Tool | Purpose |
-|---|---|
-| React 18 | UI framework |
-| React Router DOM v6 | Client-side routing |
-| Context API | Global cart & auth state |
-| CSS Modules | Scoped component styling |
-| localStorage | Cart & session persistence |
-| DummyJSON API | Mock product data |
-| Vite | Build tool |
-| Vercel | Deployment |
+|:---|:---|
+| ⚛️ &nbsp;React 18 | UI framework |
+| 🔀 &nbsp;React Router DOM v6 | Client-side routing |
+| 🌐 &nbsp;Context API | Global cart & auth state |
+| 🎨 &nbsp;CSS Modules | Scoped component styling |
+| 💾 &nbsp;localStorage | Cart & session persistence |
+| 📦 &nbsp;DummyJSON API | Mock product data |
+| ⚡ &nbsp;Vite | Build tool |
+| 🚀 &nbsp;Vercel | Deployment |
 
 ---
 
-## Getting Started
+## 🏁 Getting Started
 
 ```bash
 # 1. Clone the repository
@@ -64,70 +84,123 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-src/
-├── components/
-│   └── Navbar.jsx         # Sticky nav with cart badge
-├── context/
-│   ├── CartContext.jsx    # Global cart state + localStorage sync
-│   └── AuthContext.jsx    # Global auth state + localStorage sync
-├── pages/
-│   ├── Home.jsx
-│   ├── Shop.jsx
-│   ├── ProductDetail.jsx
-│   ├── Cart.jsx
-│   ├── Contact.jsx
-│   ├── Login.jsx
-│   └── Checkout.jsx
-├── routes/
-│   └── ProtectedRoute.jsx # Auth guard for /checkout
-└── App.jsx                # All route definitions
-```
-
----
-
-## Key Concepts Covered
-
-**React Router** — `BrowserRouter`, `Routes`, `Route`, `Link`, `NavLink`, `useNavigate`, `useParams`, `Navigate`
-
-**Context API** — `createContext`, `useContext`, `Provider`, custom hooks (`useCart`, `useAuth`)
-
-**React Hooks** — `useState`, `useEffect`, `useParams`, `useNavigate`, `useContext`
-
-**localStorage** — Lazy state initializer, `useEffect` sync for persistence
-
----
-
-## Data Source
-
-All product data is fetched from the free [DummyJSON API](https://dummyjson.com/products).
-
-```
-GET https://dummyjson.com/products        → all products
-GET https://dummyjson.com/products/:id    → single product
+shopzone/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Navbar.jsx          # 🔝 Sticky nav with live cart badge
+│   ├── context/
+│   │   ├── CartContext.jsx     # 🛒 Global cart + localStorage sync
+│   │   └── AuthContext.jsx     # 🔐 Global auth + localStorage sync
+│   ├── pages/
+│   │   ├── Home.jsx            # 🏠 Landing page
+│   │   ├── Shop.jsx            # 🏪 Product grid
+│   │   ├── ProductDetail.jsx   # 📦 Dynamic product page
+│   │   ├── Cart.jsx            # 🛒 Cart with order summary
+│   │   ├── Contact.jsx         # 📬 Static contact form
+│   │   ├── Login.jsx           # 🔐 Guest login page
+│   │   └── Checkout.jsx        # ✅ Protected checkout
+│   ├── routes/
+│   │   └── ProtectedRoute.jsx  # 🚧 Auth guard component
+│   └── App.jsx                 # 🗺️ All route definitions
+├── vercel.json                 # ⚙️ SPA routing fix
+└── package.json
 ```
 
 ---
 
-## Deployment
+## 🧠 Key Concepts Covered
 
-Deployed on Vercel. A `vercel.json` file handles SPA routing so page refreshes don't return 404:
+<details>
+<summary><b>⚛️ React Router DOM v6</b></summary>
+<br>
+
+- `BrowserRouter` — Enables client-side routing for the whole app
+- `Routes` & `Route` — Maps URL paths to components
+- `Link` & `NavLink` — SPA-safe navigation without page reloads
+- `useNavigate` — Programmatic navigation (e.g. after login)
+- `useParams` — Reads dynamic segments like `:id` from the URL
+- `Navigate` — Declarative redirect inside components
+
+</details>
+
+<details>
+<summary><b>🌐 Context API & Global State</b></summary>
+<br>
+
+- `createContext` — Creates a context object
+- `Provider` — Broadcasts state to all child components
+- `useContext` — Reads context value in any component
+- Custom hooks (`useCart`, `useAuth`) — Clean access pattern
+- Avoids prop drilling across deeply nested components
+
+</details>
+
+<details>
+<summary><b>🪝 React Hooks Used</b></summary>
+<br>
+
+- `useState` — Local and global state management
+- `useEffect` — Fetching data and syncing to localStorage
+- `useContext` — Reading from CartContext and AuthContext
+- `useParams` — Extracting product ID from URL
+- `useNavigate` — Redirecting after login / logout
+
+</details>
+
+<details>
+<summary><b>💾 localStorage Persistence</b></summary>
+<br>
+
+- Lazy `useState` initializer reads from localStorage on first load
+- `useEffect` auto-saves state on every cart change
+- Auth session persists across browser refreshes
+- Cart never lost on accidental page reload
+
+</details>
+
+---
+
+## 📡 Data Source
+
+All product data is fetched live from the free **[DummyJSON API](https://dummyjson.com)**
+
+```
+GET https://dummyjson.com/products        → fetch all products
+GET https://dummyjson.com/products/:id    → fetch single product
+```
+
+---
+
+## ⚙️ Deployment
+
+Hosted on **Vercel**. A `vercel.json` at the root fixes the classic SPA 404-on-refresh issue:
 
 ```json
 { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
 ```
 
----
-
-## Assignment
-
-Built as **Mission 6** of a React learning curriculum covering:
-- Level 1 — Navigation & Dynamic Routing
-- Level 2 — Global State with Context API
-- Level 3 — Auth, Protected Routes & Persistence
+This tells Vercel to always serve `index.html` regardless of the URL,
+letting React Router handle all routing on the client side.
 
 ---
 
-*Made with React — no page reloads were harmed in the making of this project.*
+## 📋 Assignment Levels
+
+| Level | Focus | Status |
+|:---|:---|:---:|
+| 🟢 Level 1 | React Router, Dynamic Routes, useParams | ✅ Done |
+| 🟡 Level 2 | Context API, Global Cart, Navbar Badge | ✅ Done |
+| 🔴 Level 3 | Auth, Protected Routes, localStorage | ✅ Done |
+
+---
+
+<div align="center">
+
+*Built with ⚛️ React — no page reloads were harmed in the making of this project.*
+
+</div>
