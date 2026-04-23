@@ -70,7 +70,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/shopzone.git
+git clone https://github.com/yogesh2002kashyap/ShopZone.git
 cd shopzone
 
 # 2. Install dependencies
